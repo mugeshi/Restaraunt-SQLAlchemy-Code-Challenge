@@ -41,7 +41,7 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Object Relationship Methods
+# Object Relationship Method
 
 # Review methods
 def review_customer(review):
