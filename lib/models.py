@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, Table
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.orm import declarative_base
+engine = create_engine('sqlite:///restaurant_reviews.db')
 
 Base = declarative_base()
 
@@ -9,7 +10,7 @@ class Restaurant(Base):
     __tablename__ = "restaurants"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    names = Column(String)
     price = Column(Integer)
     reviews = relationship('Review', back_populates='restaurant')
     customers = relationship('Customer', secondary='reviews', back_populates='restaurants')
