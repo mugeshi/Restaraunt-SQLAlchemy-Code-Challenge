@@ -107,8 +107,8 @@ def all_reviews(restaurant):
 
 if __name__ == "__main__":
     restaurant1 = Restaurant(name='Restaurant 1', price=3)
-    customer1 = Customer(first_name='John', last_name='Doe')
-    customer2 = Customer(first_name='Jane', last_name='Smith')
+    customer1 = Customer(first_name='John', last_name='Kamau')
+    customer2 = Customer(first_name='mercy', last_name='wairimu')
 
     session.add_all([restaurant1, customer1, customer2])
     session.commit()
